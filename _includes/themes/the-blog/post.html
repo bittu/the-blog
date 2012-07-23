@@ -1,0 +1,55 @@
+  <li class="item">
+	<div class="article">
+		<div class="article-header">
+		  <a class="ribbon date " title="{{ page.date | date_to_string }}" href="{{ page.url }}" itemprop="url">
+
+		  <div class="top ribbon-piece">{{ page.date | date: "%Y" }}</div>
+		  <div class="top ribbon-piece">{{ page.date | date: "%b" }}</div>
+		  <div class="bottom ribbon-piece">{{ page.date | date: "%d" }}</div>
+		  <div class="tail">
+			<div class="left ribbon-piece"></div>
+			<div class="right ribbon-piece"></div>
+		  </div>
+
+		</a>
+		<h1>{{ page.title }} <small>Supporting tagline</small></h1>
+		<hr>
+
+</div>
+    
+	
+	<div class="article-content">
+			<div class="tag-box">
+		  {% unless page.tags == empty %}
+			<span class="head">Tags : </span>
+			<ul>
+			{% assign tags_list = page.tags %}
+			{% include JB/tags_list %}
+			</ul>
+		  {% endunless %}  
+		  </div>
+	  {{ content }}
+	
+    <div class="pagination">
+      <ul>
+      {% if page.previous %}
+        <li class="prev"><a href="{{ BASE_PATH }}{{ page.previous.url }}" title="{{ page.previous.title }}">&larr; Previous</a></li>
+      {% else %}
+        <li class="prev disabled"><a>&larr; Previous</a></li>
+      {% endif %}
+        <li><a href="{{ BASE_PATH }}{{ site.JB.archive_path }}">Archive</a></li>
+      {% if page.next %}
+        <li class="next"><a href="{{ BASE_PATH }}{{ page.next.url }}" title="{{ page.next.title }}">Next &rarr;</a></li>
+      {% else %}
+        <li class="next disabled"><a>Next &rarr;</a></li>
+      {% endif %}
+      </ul>
+    </div>
+    <hr>
+	<p class="direction">
+    {% include JB/comments %}
+	</p>
+	 </div>
+</div>
+</li>
+
