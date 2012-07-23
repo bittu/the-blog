@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+
+	<meta name="description" content="">
+	<meta name="author" content="">
+
+	<meta name="viewport" content="width=device-width">
+	
+	<script type="text/javascript">
+		function getDocHeight() {
+			var D = document;
+			return Math.max(
+				Math.max(D.body.scrollHeight, D.documentElement.scrollHeight),
+				Math.max(D.body.offsetHeight, D.documentElement.offsetHeight),
+				Math.max(D.body.clientHeight, D.documentElement.clientHeight)
+			);
+		}
+		
+		window.onload = function(){
+			document.getElementById('loading').style.display = "none";
+			document.getElementById('main').style.display = "block";
+			$('body').scrollspy($('body').data());
+		};
+		
+	</script>
+	
+	<link rel="stylesheet"
+			href="//fonts.googleapis.com/css?family=Roboto:regular,medium,thin,italic,mediumitalic,bold" title="roboto">
+
+	<link rel="stylesheet" href="stylesheets/bootstrap.css">
+	<link rel="stylesheet" href="stylesheets/bootstrap-responsive.css">
+	<link rel="stylesheet" href="stylesheets/stylesheet.css">
+	<link rel="stylesheet" href="stylesheets/font-awesome.css">
+	<!--[if IE 7]>
+		<link rel="stylesheet" href="stylesheets/font-awesome-ie7.css">
+	<![endif]-->
+    <link rel="stylesheet" type="text/css" href="stylesheets/pygment_trac.css" media="screen" />
+	<script src="javascripts/modernizr-2.5.3-respond-1.1.0.min.js"></script>
+    <title>JBThemes.theblog by bittu</title>
+  </head>
+
+  <body>
+
+	<div id="loading">
+		<div class="block">
+			<div class="centered">
+				<img src="images/octocat-spinner-64.gif" alt="octocat-spinner">
+			</div>
+		</div>
+	</div>
+	<script type="text/javascript">
+		document.getElementById('loading').style.height = (getDocHeight()-100)+"px";
+	</script>
+	<div id="main">
+    <header>
+		<div class="well ics-border-bottom">
+			<h1><a href="/">bittu.github.com </a><span style="font-size: 24px;">/</span> JBThemes.the-blog</h1>
+			<div class="pull-right">
+				<div class="btn-group">
+					<a href="https://github.com/bittu/JBThemes.the-blog/zipball/master" class="btn">
+						<small>Download</small>
+						<h5>.ZIP</h5>
+					</a>
+					<a href="https://github.com/bittu/JBThemes.the-blog/tarball/master" class="btn">
+						<small>Download</small>
+						<h5>.TAR</h5>
+					</a>
+					<a href="https://github.com/bittu/JBThemes.the-blog" class="btn">
+						<small>Fork</small>
+						<h5>GITHUB</h5>
+					</a>
+				</div>
+			</div>
+		</div>
+    </header>
+
+    <div class="container">
+		
+		<div class="row">
+			<div class="span12">
+				<h2 class="pull-right"> - a blog theme for Jekyll + Jekyll-Bootstrap. <small>inspired from dynamic themes for blogger.</small></h2>
+				<div class="clearfix"></div>
+				
+			</div>	
+		</div>		
+		
+		<div class="row">
+			<div class="span12">
+				<section id="contents">
+					<h3>Theme :</h3>
+					<br />
+					<div class="row">
+						<div class="span12">
+							<hr />
+							<blockquote>
+								<p class="ics-font-grey">Have a look at the demo</p>
+								<small><a href="demo/">here</a></small>
+								<p class="ics-font-grey">Browse source</p>
+								<small><a href="https://github.com/bittu/JBThemes.the-blog">here</a></small>
+								<p class="ics-font-grey">Install Guide</p>
+								<small><a data-toggle="modal" href="#installguide" >here</a></small>
+							</blockquote>
+							<br />
+						</div>
+					</div>
+				</section>
+	
+				
+			</div>
+		</div>
+	</div>		
+    
+	
+	<footer class="navbar-fixed-bottom">
+		<div class="footer ics-border-top">
+			<p class="pull-left">&copy; Sandeep Vemula <i>aka</i> bittu 2012. </p>
+			<p>&nbsp;&nbsp;Powered By 
+				<a href="https://www.github.com"><i class="icon-github"> </i> Github</a>
+			</p>
+			</div>
+	</footer>
+
+	</div>
+	
+	<div class="modal hide" id="installguide">
+	  <div class="modal-header">
+		<button type="button" class="close" data-dismiss="modal">x</button>
+		<h3>Installation Guide: the-blog</h3>
+	  </div>
+	  <div class="modal-body">
+		<p>To install, run the following rake task in the root of your Jekyll-Bootstrap directory.</p>
+		<pre><code>rake theme:install git="https://github.com/bittu/JBThemes.the-blog.git"</code></pre>
+		<ul>
+			<li><strong>name:</strong>the-blog</li>
+			<li><strong>author:</strong>
+		<ul>
+        <li> Sandeep Vemula <em> aka </em> bittu</li>
+        <li><a href="mailto:bittu4u.4ever@gmail.com">bittu4u.4ever@gmail.com</a></li>
+        <li><a href="http://bittu.github.com" target="_blank">http://bittu.github.com</a></li>
+      </ul>
+    </li>
+  </ul>
+	  </div>
+	  <div class="modal-footer">
+		<a href="#" class="btn" data-dismiss="modal">Close</a>
+	  </div>
+	</div>
+
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
+	<script>window.jQuery || document.write('<script src="javascripts/jquery-1.7.2.min.js"><\/script>')</script>
+
+	<script src="javascripts/bootstrap.min.js"></script>
+
+  </body>
+</html>
